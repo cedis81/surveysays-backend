@@ -9,7 +9,7 @@ const handle404 = customErrors.handle404
 const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
-router.get('/surveys/:surveyId/answers', (req, res) => {
+router.get('/surveys/:surveyId/answers', requireToken, (req, res) => {
   Survey.findById(req.params.surveyId)
     .populate('answer')
     .then(handle404)
