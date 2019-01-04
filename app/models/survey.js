@@ -14,10 +14,10 @@ const surveySchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  answer: {
-    type: Array
-    // required: true
-  }
+  answer: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Answer'
+  }]
 }, {
   timestamps: true
 })
