@@ -15,8 +15,8 @@ const surveySchema = new mongoose.Schema({
     required: true
   },
   answer: {
-    type: Array,
-    required: true
+    type: Array
+    // required: true
   }
 }, {
   timestamps: true
