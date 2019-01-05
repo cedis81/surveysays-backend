@@ -9,6 +9,10 @@ const answerSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
+  },
+  survey: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Survey'
   }
 }, {
   timestamps: true
