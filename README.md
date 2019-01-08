@@ -4,6 +4,12 @@
 
 Survey says app allows users to create a survey questions and get answers for them. A signed-in user creates a survey and can be able to update or delete their own surveys. All signed-in users can only view a survey and have an option to answer them.
 
+### Group Members
+* [Hoa 'Tommy' Le](https://github.com/Tommyle90)
+
+* [Cedric Hom](https://github.com/cedis81)
+
+* [Bezawit Gebru](https://github.com/bbgweb)
 
 ### Technologies used
 - Javascript
@@ -39,11 +45,11 @@ Survey says app allows users to create a survey questions and get answers for th
 
 | Verb   | URI Pattern            | Controller#Action |
 |--------|------------------------|-------------------|
-| POST   | `/answers`              | `answers#create`  |
-| GET    | `/answers`              |  `answers#index`  |
+| POST   | `/surveys/:id/answers`              | `answers#create`  |
+| GET    | `/surveys/:id/answers`              |  `answers#index`  |
 
 ### Planning Process
-We used scrum to plan our project and work closely. We first did the ERD and wireframes and part out the works that needs to be done. We deligate the works to each of us and whenever there is a problem we come together and try to solve it or put out an issue queue. At the beginning and end of the day we discuss the works that are done and needs to be done after. Team work made this app work!!!
+We used scrum to plan our project and work closely. We first did the ERD and wireframes and broke out the specific tasks that need to be done. We delegate the works to each of us and whenever there is a problem we come together and try to solve it or put out an issue queue. At the beginning and end of the day we discuss the works that are done and needs to be done after. Team work made this app work!!!
 
 ### Development Process
 First we created models and routes for survey and answer. A user has many surveys and a survey belongs to a user. A survey has also has many answers and an answer belongs to a survey. On the survey there is a reference for the owner, which would help tries to match which survey belongs to which user. The answer has a user and a survey as a reference, which helps to manage who answered a specific survey. Scripts are then created for surveys and answers.
@@ -68,7 +74,8 @@ First we created models and routes for survey and answer. A user has many survey
 
 
 ### Future Goals
-A user can only be able to answer a survey ones and hide the submit answer button
+- A user can only be able to answer a survey once and hide the submit answer button.
+- Each live survey should be hosted at a unique, randomly-generated URL.
 
 ### Links
 >- https://github.com/cedis81/surveysays-backend - Backend App
