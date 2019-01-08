@@ -14,7 +14,7 @@ router.get('/surveys/:surveyId/answers', requireToken, (req, res) => {
     .populate('answer')
     .then(handle404)
     .then(survey => {
-      console.log(survey)
+      // console.log(survey)
       res.status(200).json({ answer: survey.answer })
     })
     .catch(err => handle(err, res))
@@ -31,13 +31,13 @@ router.post('/surveys/:surveyId/answers', requireToken, (req, res) => {
       return Survey.findById(req.params.surveyId)
     })
     .then(survey => {
-      console.log(survey, answer)
+      // console.log(survey, answer)
       if (!survey.answer) survey.answer = []
       survey.answer = survey.answer.concat([answer._id])
       return survey
     })
     .then(survey => {
-      console.log(survey)
+      // console.log(survey)
       survey.save()
     })
     .then(() => res.status(201).json({ answer: answer.toObject() }))
