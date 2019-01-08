@@ -11,6 +11,14 @@ Survey says app allows users to create a survey questions and get answers for th
 
 * [Bezawit Gebru](https://github.com/bbgweb)
 
+
+### Links
+* [Backend App](https://github.com/cedis81/surveysays-backend)
+* [Heroku Site](https://stormy-beyond-55396.herokuapp.com/)
+* [GitHub Repo](https://github.com/Tommyle90/surverysays-frontend)
+* [Survey Says Website](https://Tommyle90.github.io/surverysays-frontend)
+
+
 ### Technologies used
 - Javascript
 - Express JS
@@ -76,9 +84,3 @@ First we created models and routes for survey and answer. A user has many survey
 ### Future Goals
 - A user can only be able to answer a survey once and hide the submit answer button.
 - Each live survey should be hosted at a unique, randomly-generated URL.
-
-### Links
->- https://github.com/cedis81/surveysays-backend - Backend App
->- https://stormy-beyond-55396.herokuapp.com/- Heroku Site
->- https://github.com/Tommyle90/surverysays-frontend- GH Repo
->- https://Tommyle90.github.io/surverysays-frontend- Deployed App
