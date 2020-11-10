@@ -15,6 +15,9 @@ const localDb = process.env.TESTENV ? database.test : database.development
 
 // Environment variable MONGODB_URI will be available in
 // heroku production evironment otherwise use test or development db
-const currentDb = process.env.MONGODB_URI || localDb
+// 11/10/2020 mLab shut down Heroku add-on. Detatched add-on on this date
+// changed below from MONGODB_URI to DB_URI per mlab docs to switch to new
+// heroku config
+const currentDb = process.env.DB_URI || localDb
 
 module.exports = currentDb
